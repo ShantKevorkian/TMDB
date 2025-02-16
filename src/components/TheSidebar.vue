@@ -34,7 +34,10 @@ const { filteredGenreIds } = storeToRefs(movieStore);
           </div>
           <div v-else class="w-full h-full rounded-lg shadow-xl border border-gray-400 dark:border-gray-600 overflow-hidden">
             <div class="relative flex flex-col gap-y-2 w-full h-full overflow-y-auto">
-              <template v-for="item in items">
+              <template
+                v-for="item in items"
+                :key="item.id"
+              >
                 <div
                   class="flex items-center justify-between w-full px-4 py-2 cursor-pointer transition-colors duration-300"
                   :class="{

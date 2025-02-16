@@ -10,7 +10,8 @@ const addToDocumentElement = () => {
   document.documentElement.setAttribute('data-theme', isDark.value ? 'dark' : 'light');
 };
 
-!getLocalStorage('theme') ? setLocalStorage('theme', 'light') : addToDocumentElement();
+if (!getLocalStorage('theme')) setLocalStorage('theme', 'light');
+else addToDocumentElement();
 
 const handleThemeChange = () => {
   isDark.value = !isDark.value;

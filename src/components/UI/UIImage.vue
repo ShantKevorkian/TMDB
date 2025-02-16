@@ -1,5 +1,4 @@
 <script setup lang='ts'>
-import { getMoviePoster } from '@/helpers/helper';
 import UISimpleSkeletonLoading from './UISimpleSkeletonLoading.vue';
 
 defineProps<{ 

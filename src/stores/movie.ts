@@ -190,7 +190,7 @@ export const useMovieStore = defineStore('movie', () => {
   
       // We need to filter the results to get only the trailers by checking the type
       // And site for YouTube
-      individualMovie.trailers = response.data.results.filter((video: any) => 
+      individualMovie.trailers = response.data.results.filter((video: Video) => 
         video.type === 'Trailer' && video.site === 'YouTube');
 
       // Save the individualMovie.trailers to local storage

@@ -6,12 +6,11 @@ import { useIntersectionObserver } from '@/composables/useIntersectionObserver';
 import { useRouter } from 'vue-router';
 import { setLocalStorage, getLocalStorage } from '@/helpers/localStorage';
 import { getMoviePoster } from '@/helpers/helper';
-import Header from '@/components/Header.vue';
-import Sidebar from '@/components/Sidebar.vue';
+import Header from '@/components/TheHeader.vue';
+import Sidebar from '@/components/TheSidebar.vue';
 import UICard from '@/components/UI/UICard.vue';
 import UILoading from '@/components/UI/UILoading.vue';
 import UIIcon from '@/components/UI/UIIcon.vue';
-import UISimpleSkeletonLoading from '@/components/UI/UISimpleSkeletonLoading.vue';
 import UIVirtualList from '@/components/UI/UIVirtualList.vue';
 import UIPaperMenu from '@/components/UI/UIPaperMenu.vue';
 import UITitle from '@/components/UI/UITitle.vue';
@@ -130,7 +129,10 @@ useIntersectionObserver(sentinel, fetchPopularMovies);
               </div>
               <div v-else class="w-full h-full rounded-lg shadow-md border border-gray-300 dark:border-gray-600 overflow-hidden">
                 <div class="relative flex flex-col gap-y-2 w-full h-full">
-                  <template v-for="genre in filteredMovieGenres">
+                  <template
+                    v-for="genre in filteredMovieGenres"
+                    :key="genre.id"
+                  >
                     <div
                       class="flex items-center justify-between w-full px-4 py-2 cursor-pointer transition-colors duration-300"
                       :class="{

@@ -7,7 +7,6 @@ import { getMoviePoster } from '@/helpers/helper';
 import { setLocalStorage } from '@/helpers/localStorage';
 import { PROFILE_IMAGE_SIZE } from '@/helpers/constants';
 import UILoading from '@/components/UI/UILoading.vue';
-import UISimpleSkeletonLoading from '@/components/UI/UISimpleSkeletonLoading.vue';
 import UICard from '@/components/UI/UICard.vue';
 import UIIcon from '@/components/UI/UIIcon.vue';
 import UITitle from '@/components/UI/UITitle.vue';

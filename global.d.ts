@@ -19,6 +19,24 @@ declare global {
     results: Movie[];
     total_pages: number;
   }
+
+  type ProductionCompany = {
+    id: number;
+    name: string;
+    logo_path: string;
+    origin_country: string;
+  }
+
+  type SpokenLanguage = {
+    english_name: string;
+    iso_639_1: string;
+    name: string;
+  }
+
+  type Video = {
+    site: string;
+    type: string;
+  }
   
   type Detail = {
     id: number;
@@ -32,8 +50,8 @@ declare global {
     backdrop_path: string;
     revenue: number;
     budget: number;
-    production_companies: any[];
-    spoken_languages: any[];
+    production_companies: ProductionCompany[];
+    spoken_languages: SpokenLanguage[];
   }
   
   type Cast = {
