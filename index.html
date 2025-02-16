@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/favicon.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Movie DB</title>
+    <script>
+      const setTheme = (theme) => {
+        theme ??= localStorage.theme || 'light';
+        document.documentElement.classList.toggle('dark', theme);
+        document.documentElement.setAttribute('data-theme', theme);
+        if (theme === 'dark') {
+          document.documentElement.style.backgroundColor = '#121212';
+        }
+        localStorage.theme = theme;
+      };
+      setTheme();
+    </script>
+  </head>
+  <body class="bg-brand-body">
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
