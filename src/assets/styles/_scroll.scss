@@ -1,0 +1,17 @@
+@screen lg {
+  ::-webkit-scrollbar {
+    @apply bg-transparent cursor-auto w-[var(--scroll-size)] h-[var(--scroll-size)];
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-brand-body;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-brand-900 dark:bg-white border-none shadow-none;
+  }
+
+  ::-webkit-scrollbar-thumb:active {
+    @apply bg-brand-900 dark:bg-white;
+  }
+}

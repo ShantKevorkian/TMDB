@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "transition", "scroll";
+
+@layer base {
+  :root {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    --sat: env(safe-area-inset-top);
+    --sar: env(safe-area-inset-right);
+    --sab: env(safe-area-inset-bottom);
+    --sal: env(safe-area-inset-left);
+
+    --scroll-size: 6px;
+
+    --brand-50: 169 214 229; // #A9D6E5
+    --brand-100: 137 194 217; // #89C2D9
+    --brand-200: 97 165 194; // #61A5C2
+    --brand-300: 70 143 175; // #468FAF
+    --brand-400: 44 125 160; // #2C7DA0
+    --brand-500: 42 111 151; // #2A6F97
+    --brand-600: 1 79 134; // #014F86
+    --brand-700: 1 73 124; // #01497C
+    --brand-800: 1 58 99; // #013A63
+    --brand-900: 1 42 74; // #012A4A
+  }
+
+  :root[data-theme="light"] {
+    --brand-body: 255 255 255; // #FFFFFF
+    --brand-border: 65 106 183; // #416AB7
+  }
+
+  :root[data-theme="dark"] {
+    --brand-body: 18 18 18; // #121212
+  }
+}
+
+* {
+  overflow-wrap: anywhere;
+}
+
+body {
+  overscroll-behavior: none;
+}
