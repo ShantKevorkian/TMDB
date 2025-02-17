@@ -5,7 +5,7 @@ import Theme from './components/TheTheme.vue';
 
 <template>
   <Theme />
-  <main class="w-full h-full max-w-screen-2xl mx-auto bg-brand-body transition-colors duration-300">
+  <main class="w-full h-full bg-brand-body transition-colors duration-300">
     <RouterView v-slot="{ Component, route }">
       <transition name="fade-300">
         <component :is="Component" :key="route.path" />

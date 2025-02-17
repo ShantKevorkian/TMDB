@@ -96,7 +96,7 @@ useIntersectionObserver(sentinel, fetchPopularMovies);
 
 <template>
   <div
-    class="flex"
+    class="flex max-w-screen-2xl mx-auto"
     :style="{ minHeight: getMinHeight() }"
   >
     <Header @filter="isMobileFiltersOpen = true" />
